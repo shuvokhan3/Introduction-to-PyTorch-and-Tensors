@@ -12,6 +12,7 @@ linear_layer = nn.Linear(in_features=3, out_features=2)
 output = linear_layer(input_tensor)
 
 print("Output shape:", output.shape)
+
 print(output)
 
 

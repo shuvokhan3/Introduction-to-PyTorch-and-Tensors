@@ -40,9 +40,6 @@ print(seq2)
 #create float seq
 seq3 = torch.arange(0.0,1.0,0.4)
 print(seq3)
-
-
-
 #torch.linspace()
 #torch.linspace(start, end, how_many_numbers)
 

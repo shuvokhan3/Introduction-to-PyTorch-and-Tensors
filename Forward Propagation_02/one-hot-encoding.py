@@ -5,7 +5,7 @@ import torch.nn.functional as F
 labels = torch.tensor([1,2,3,4])
 
 #convert one-hot this label data (binery vector)
-one_hot_labels = F.one_hot(labels,num_classes=5)
+one_hot_labels = F.one_hot(labels,num_classes=5).float()
 print(one_hot_labels)
 
 

@@ -1,22 +1,17 @@
 import torch
 import torch.nn.functional as F
 
-# Tensor dataset
-data = torch.tensor([[1,2,3],[4,5,6],[7,8,9]])
+#label data
+labels = torch.tensor([1,2,3,4])
 
-#work with first feature
-first_data = data[0][0]
-second_data = data[0][1]
-third_data = data[0][2]
+#convert one-hot this label data (binery vector)
+one_hot_labels = F.one_hot(labels,num_classes=5)
+print(one_hot_labels)
 
-#convert those data into one hot
-first_data_label = F.one_hot(first_data, num_classes=10)
-second_data_label = F.one_hot(second_data, num_classes=10)
-third_data_label = F.one_hot(third_data, num_classes=10)
 
-print(first_data_label)
-print(second_data_label)
-print(third_data_label)
+#back in label data (binary vector to label data)
+back_in_label_data = torch.argmax(one_hot_labels,dim=1)
+print(back_in_label_data)
 
 
 
